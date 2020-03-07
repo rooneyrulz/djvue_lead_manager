@@ -1,2 +1,3 @@
 # djvue_lead_manager
+
 Full stack app with vue.js and django rest framework including user authentications using token mechanism, permissions and more...
