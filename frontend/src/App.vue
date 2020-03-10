@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <h1>{{ heading }}</h1>
+    <Lead />
   </div>
 </template>
 
 <script>
+import Lead from './pages/Lead';
+
 export default {
   name: 'App',
-  components: {},
-  data: () => ({
-    heading: 'Lead Manager'
-  })
+  components: {
+    Lead
+  },
+  data: () => ({})
 };
 </script>
 
