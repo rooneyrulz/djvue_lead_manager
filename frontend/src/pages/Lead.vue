@@ -12,11 +12,13 @@ export default {
   data: () => ({
     leads: []
   }),
-  methods: {
-    getLeads: async function() {
-      const { data } = await axios.get('http://localhost:8000/api/leads');
-      this.leads = data;
-    }
+  beforeCreate() {
+    console.log('running before create');
+  },
+  async created() {
+    const { data } = await axios.get('/leads/');
+    // this.leads = data;
+    console.log(data);
   }
 };
 </script>
