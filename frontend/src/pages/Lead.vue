@@ -1,25 +1,18 @@
 <template>
-  <div id="lead">Leads</div>
+  <div id="lead">
+    <p>{{ llLeads[0].name }}</p>
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Lead',
-  components: {},
-  props: {},
-  data: () => ({
-    leads: []
-  }),
-  beforeCreate() {
-    console.log('running before create');
+  data() {
+    return {};
   },
-  async created() {
-    const { data } = await axios.get('/leads/');
-    // this.leads = data;
-    console.log(data);
-  }
+  computed: mapGetters(['llLeads'])
 };
 </script>
 
