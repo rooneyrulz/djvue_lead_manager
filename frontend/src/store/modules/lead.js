@@ -1,28 +1,26 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-export const state = {
-  leads: [
-    {
-      id: 21212,
-      name: 'Kumar',
-      email: 'kumar@kumar.com',
-      country: 'India'
-    },
-    {
-      id: 3434343,
-      name: 'Denial',
-      email: 'denial@denial.com',
-      country: 'Canada'
-    }
-  ]
+const state = {
+  leads: [],
 };
 
-export const getters = {
-  llLeads: state => {
+const getters = {
+  llLeads: (state) => {
     return state.leads;
-  }
+  },
 };
 
-export const actions = {};
+const actions = {
+  getLeads: async ({ commit }) => {
+    const { data } = await axios.get('http://localhost:8000/api/leads/');
+    console.log(data);
 
-export const mutations = {};
+    commit('setLeads', data);
+  },
+};
+
+const mutations = {
+  setLeads: (state, data) => (state.leads = [...data]),
+};
+
+export default { state, getters, actions, mutations };

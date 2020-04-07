@@ -1,18 +1,24 @@
 <template>
   <div id="lead">
-    <p>{{ llLeads[0].name }}</p>
+    <p>{{ llLeads[0].email }}</p>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Lead',
   data() {
     return {};
   },
-  computed: mapGetters(['llLeads'])
+  methods: {
+    ...mapActions(['getLeads']),
+  },
+  computed: mapGetters(['llLeads']),
+  created() {
+    this.getLeads();
+  },
 };
 </script>
 
