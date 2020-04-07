@@ -1,6 +1,6 @@
 // import axios from 'axios';
 
-const state = {
+export const state = {
   leads: [
     {
       id: 21212,
@@ -17,12 +17,12 @@ const state = {
   ]
 };
 
-const getters = {
-  llLeads: state => state.leads
+export const getters = {
+  llLeads: state => {
+    return state.leads;
+  }
 };
 
-const actions = {};
+export const actions = {};
 
-const mutations = {};
-
-export default { state, getters, actions, mutations };
+export const mutations = {};
