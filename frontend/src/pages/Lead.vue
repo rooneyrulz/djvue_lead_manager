@@ -1,6 +1,8 @@
 <template>
   <div id="lead">
-    <p>{{ llLeads[0].email }}</p>
+    <p>
+      Leads
+    </p>
   </div>
 </template>
 
