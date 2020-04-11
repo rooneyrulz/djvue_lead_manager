@@ -1,6 +1,6 @@
 <template>
-  <md-app-toolbar class="md-primary">
-    <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+  <md-app-toolbar md-mode="reveal" class="md-primary">
+    <md-button class="md-icon-button" @click="onClick">
       <md-icon>menu</md-icon>
     </md-button>
     <span class="md-title">Lead Manager</span>
@@ -8,7 +8,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'app-header',
+  props: ['onClick'],
+};
 </script>
 
 <style></style>
