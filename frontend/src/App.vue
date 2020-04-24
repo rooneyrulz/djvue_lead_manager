@@ -36,7 +36,7 @@
         </md-list>
       </md-app-drawer>
       <md-app-content>
-        <Leads />
+        <router-view />
       </md-app-content>
     </md-app>
   </div>
@@ -45,16 +45,12 @@
 <script>
 // import AppHeader from './layouts/AppHeader';
 // import AppDrawer from './layouts/AppDrawer';
-import Leads from './pages/Leads';
 
 export default {
   name: 'app',
   data: () => ({
     menuVisible: false,
   }),
-  components: {
-    Leads,
-  },
   methods: {
     // onClick() {
     //   this.menuVisible = !this.menuVisible;

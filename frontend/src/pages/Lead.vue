@@ -1,6 +1,7 @@
 <template>
   <div id="lead">
     <h2 v-if="loading">Loading..</h2>
+    <h2 v-if="!lead">No lead found..</h2>
     <div v-if="!loading">
       <LeadItem :key="lead.email" :lead="lead" />
     </div>
@@ -26,7 +27,7 @@ export default {
   },
   computed: mapGetters(['lead', 'loading']),
   created() {
-    this.getLead();
+    this.getLead(this.$route.params.id);
   },
 };
 </script>
