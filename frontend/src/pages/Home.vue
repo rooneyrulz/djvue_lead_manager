@@ -1,5 +1,7 @@
 <template>
-  <div id="home"></div>
+  <div id="home">
+    <h1>Lead Manager</h1>
+  </div>
 </template>
 
 <script>
@@ -8,4 +10,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>
