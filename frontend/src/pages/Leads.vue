@@ -1,8 +1,8 @@
 <template>
-  <div id="lead">
+  <div id="leads">
     <h2 v-if="loading">Loading..</h2>
     <div v-if="!loading">
-      <LeadItem :key="lead.email" :lead="lead" />
+      <LeadItem :key="lead.email" v-for="lead in llLeads" :lead="lead" />
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@ import { mapGetters, mapActions } from 'vuex';
 import LeadItem from '@/components/LeadItem';
 
 export default {
-  name: 'Lead',
+  name: 'Leads',
   data() {
     return {};
   },
@@ -22,11 +22,11 @@ export default {
     LeadItem,
   },
   methods: {
-    ...mapActions(['getLead']),
+    ...mapActions(['getLeads']),
   },
-  computed: mapGetters(['lead', 'loading']),
+  computed: mapGetters(['llLeads', 'loading']),
   created() {
-    this.getLead();
+    this.getLeads();
   },
 };
 </script>

@@ -36,7 +36,7 @@
         </md-list>
       </md-app-drawer>
       <md-app-content>
-        <Lead />
+        <Leads />
       </md-app-content>
     </md-app>
   </div>
@@ -45,7 +45,7 @@
 <script>
 // import AppHeader from './layouts/AppHeader';
 // import AppDrawer from './layouts/AppDrawer';
-import Lead from './pages/Lead';
+import Leads from './pages/Leads';
 
 export default {
   name: 'app',
@@ -53,7 +53,7 @@ export default {
     menuVisible: false,
   }),
   components: {
-    Lead,
+    Leads,
   },
   methods: {
     // onClick() {
