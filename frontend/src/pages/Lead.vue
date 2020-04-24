@@ -31,4 +31,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#lead {
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+</style>
