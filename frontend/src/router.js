@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 // COMPONENTS
-import Home from '@pages/Home';
+import Home from '@/pages/Home';
 import Leads from '@/pages/Leads';
 import Lead from '@/pages/Lead';
 
